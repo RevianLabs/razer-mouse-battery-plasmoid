@@ -1,5 +1,5 @@
 # Razer Mouse Battery Widget
-[![CI](https://github.com/revianlabs/razer-mouse-battery-plasmoid/actions/workflows/ci.yml/badge.svg)](https://github.com/revianlabs/plasmoid-razerbatterytray/actions/workflows/ci.yml)
+[![CI](https://github.com/revianlabs/razer-mouse-battery-plasmoid/actions/workflows/build.yml/badge.svg)](https://github.com/revianlabs/razer-mouse-battery-plasmoid/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 <a href='https://ko-fi.com/bogdans' target='_blank'><img height='35' style='border:0px;height:35px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
