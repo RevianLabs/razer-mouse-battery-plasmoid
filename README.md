@@ -67,7 +67,7 @@ To remove an existing installation:
 
 ## Troubleshooting
 
-Please refer to the [Troubleshooting document](https://github.com/revianlabs/razer-mouse-battery-plasmoid/Troubleshooting.md)
+Please refer to the [Troubleshooting wiki page](https://github.com/RevianLabs/razer-mouse-battery-plasmoid/wiki/Troubleshooting)
 
 ## Development
 
