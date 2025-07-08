@@ -1,0 +1,68 @@
+name: Plasmoid Build Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build and Test Plasmoid
+    runs-on: ubuntu-latest
+    container:
+      image: kdeneon/plasma:user
+      options: --user root
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          apt-get update
+          apt-get install -y \
+            build-essential \
+            cmake \
+            extra-cmake-modules \
+            gettext \
+            plasma-framework-dev \
+            libkf5plasma-dev \
+            qtbase5-dev \
+            qtdeclarative5-dev \
+            libqt5x11extras5-dev \
+            qml-module-org-kde-kirigami2 \
+            qml-module-qtquick-controls2 \
+            qml-module-qtquick-layouts \
+            qml-module-qt-labs-platform \
+            qml-module-qtgraphicaleffects
+
+      - name: Install Plasmoid
+        run: |
+          mkdir -p /tmp/plasma-test
+          export KDEHOME=/tmp/plasma-test
+          
+          plasmapkg2 -t plasmoid -i .
+          
+          if [ $? -ne 0 ]; then
+            echo "Error: Plasmoid installation failed"
+            exit 1
+          fi
+          echo "✓ Plasmoid installed successfully"
+
+      - name: List installed plasmoids
+        run: |
+          export KDEHOME=/tmp/plasma-test
+          plasmapkg2 -t plasmoid -l
+          echo "✓ Plasmoid is listed among installed plasmoids"
+
+      - name: Uninstall Plasmoid
+        run: |
+          export KDEHOME=/tmp/plasma-test
+          plasmapkg2 -t plasmoid -r .
+          if [ $? -ne 0 ]; then
+            echo "Error: Plasmoid uninstallation failed"
+            exit 1
+          fi
+          echo "✓ Plasmoid uninstalled successfully"

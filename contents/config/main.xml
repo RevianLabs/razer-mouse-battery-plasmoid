@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<kcfg
+        xmlns="http://www.kde.org/standards/kcfg/1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd"
+>
+    <kcfgfile name="" />
+    <group name="General">
+        <entry name="delay" type="Double">
+            <label>Delay</label>
+            <whatsthis>Battery check delay in seconds</whatsthis>
+            <default>60.0</default> <!-- every 1 minute by default -->
+        </entry>
+        <entry name="bold" type="Bool">
+            <label>Bold</label>
+            <whatsthis>Use bold text</whatsthis>
+            <default>false</default>
+        </entry>
+        <entry name="lowBatteryThreshold" type="int">
+            <label>Low Power Threshold</label>
+            <default>20</default>
+        </entry>
+        <entry name="mediumBatteryThreshold" type="int">
+            <label>Medium Power Threshold</label>
+            <default>50</default>
+        </entry>
+        <entry name="lowBatteryColor" type="String">
+            <label>Low Power Color</label>
+            <default>#ff0000</default>
+        </entry>
+        <entry name="mediumBatteryColor" type="String">
+            <label>Medium Power Color</label>
+            <default>#ffa500</default>
+        </entry>
+        <entry name="highBatteryColor" type="String">
+            <label>High Power Color</label>
+            <default>#00ff00</default>
+        </entry>
+
+    </group>
+</kcfg>

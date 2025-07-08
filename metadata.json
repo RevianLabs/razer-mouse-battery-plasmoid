@@ -1,0 +1,23 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "Bogdan Socaciu"
+      }
+    ],
+    "Id": "com.github.revianlabs.razermousebatteryplasmoid",
+    "Name": "Razer Mouse Battery",
+    "Category": "Utilities",
+    "Description": "Displays battery status for a Razer wireless mouse",
+    "Icon": "input-mouse",
+    "License": "MIT",
+    "ServiceTypes": [
+      "Plasma/Applet"
+    ],
+    "KPackageStructure": "Plasma/Applet",
+    "Version": "1.0.0",
+    "Website": "https://github.com/revianlabs/razer-mouse-battery-plasmoid",
+    "EnabledByDefault": true
+  },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}
